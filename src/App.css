@@ -1,42 +1,110 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  gap: 2rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a {
+  cursor: pointer;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.main-menu.hidden {
+  display: none;
 }
 
-.card {
-  padding: 2em;
+.play-button {
+  display: flex;
 }
 
-.read-the-docs {
-  color: #888;
+.difficulty-menu {
+  display: none;
+}
+
+.difficulty-menu.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.difficulty-menu > .menu-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.difficulty-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.main {
+  display: none;
+}
+
+.main.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.overview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.game img {
+  width: 15rem;
+}
+
+.win-screen {
+  display: none;
+}
+
+.win-screen .options {
+  display: flex;
+  gap: 1rem;
+}
+
+.win-screen.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

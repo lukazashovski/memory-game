@@ -1,0 +1,12 @@
+0. user clicks on play
+1. user chooses difficulty
+2. all skins are fetched from api
+3. {dif amnt} random skins are chosen, user score set to 0
+4. each skin gets put in component and gets unique key (map array and key = index)
+5. hasBeenClicked boolean state for each skin
+6. if skin clicked and already hasBeenClicked reset score to 0
+7. if skin not clicked yet score +1
+8. if score reaches {dif amnt}, show win screen
+9. user can restart
+
+function getRandomItems
